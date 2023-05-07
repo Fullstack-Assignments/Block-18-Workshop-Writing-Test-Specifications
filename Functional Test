@@ -1,0 +1,40 @@
+// ===================================
+
+Written in a more natural language
+
+// ===================================
+
+Functional Tests:
+Syntax:
+multiplication(number1 , number2)
+
+Description:
+User may specify two numbers ranging from -10^15 to +10^15 separated by comma. An error message will prompt user to correct input according to syntax and number range limits as needed.
+The function will display result on a new line indicating input arguments and the multiplication value.
+
+Example
+Input:
+multiplication(3, 7)
+
+Output:
+21
+
+// ===================================
+
+Functional Tests:
+Syntax:
+concatOdds([Integer Array1] , [Integer Array2])
+
+Description:
+User may specify two arrays of integers ranging from -10^15 to 10^15
+Each array is required to contain at least one integer and maximum of 100 integers. Each array may contain any combinition of integers including repeated numbers. The reult will be combination of both arrays reduced to a single array of unique odd numbers in ascending order.
+Error message will prompt user to correct syntax and integer range limits as needed.
+
+Example
+Input:
+concatOdds([3, 2, 1], [9, 1, 1, 1, 4, 15, -1])
+
+Output:
+[-1, 1, 3, 9, 15]
+
+// ==================================

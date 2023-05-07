@@ -1,0 +1,63 @@
+Think about the following;
+you may need to make assumptions or decisions about the prompt and how the code should behave:
+What should happen with unexpected inputs?
+What kinds of unexpected inputs should we worry about?
+
+// ================ Prompt - multiplication ==================
+Prompt:
+A function called "multiplication" that returns the product of the two input numbers.
+
+// =============== Assumptions - multiplication ===============
+Assumption:
+1- Any number is allowed (integer, decimal, positive, negative)
+2- No number may exceed 10^15
+3- No nmber may be less than -10^-15
+
+// ====================== Unit Test Plan ======================
+Unit Test:
+Expect multiplication(2, 3) to be equal to 6
+Expect multiplication(-2, 3) to be eqal to -6
+Expect multiplication(-2, -3) to be eqal to 6
+Expect multiplication(0.5, 3) to be equal to 1.5
+Expect multiplication(10e14, 10) to be equal 10e15
+Expect multiplication(-10e14, 10) to be equal -10e15
+Expect multiplication(10e-15, 10) to be equal 10e-14
+Expect multiplication(-10e-15, 10) to be equal -10e-14
+Expect multiplication("a", 3) to be an error
+Expect multiplication(3,"a") to be an error
+Expect multiplication(5) to be an error
+Expect multiplication(1,2,3) to be an error
+Expect multiplication of two number exceeding 10^15 to equal an error
+
+// ===========================================================
+// ===========================================================
+
+// ===================== Prompt - concatOdds ===================
+Prompt:
+A function called "concatOdds" takes two arrays of integers as arguments.
+
+It should return a
+single array that only contains the odd numbers,
+in ascending order, from both of the arrays.
+Example: concatOdds([3, 2, 1], [9, 1, 1, 1, 4, 15, -1])
+...should result in [-1, 1, 3, 9, 15]
+
+// ================= Assumptions - concatOdds =================
+Assumptions:
+1- Input limited to two arrays only
+2- Only array of integers allowed
+3- Positive and negative numbers allowed
+4- Minimum array size of 1 number
+5- Maximum array size of 100
+6- Output array represents all unique odd numbers in ascending order
+
+// ================== Unit Test - concatOdds =================
+Unit Test:
+Expect concatOdds([3, 2, 1] , [9, 1, 1, 1, 4, 15, -1]) to be equal [-1, 1, 3, 9, 15]
+Expect concatOdds([1,2,3,4] , [5,6,7,8]) to be equal [1,3,5,7]
+Expect concatOdds([5,6,7,8] , [1,2,3,4]) to be equal [1,3,5,7]
+Expect concatOdds([-1,-2,3,4] , [-5,-6,7,8]) to be equal [-5,-1,3,7]
+Expect concatOdds([-5,-6,7,8] , [-1,-2,3,4], ) to be equal [-5,-1,3,7]
+Expect concatOdds([-1,-2] , [-5,-6,7,8]) to be equal [-5,-1,7]
+Expect concatOdds([-5,-6,7,8] , [-1,-2], ) to be equal [-5,-1,7]
+Expect ([-5,-6,7,8]) to be equal error message: Function "concatOdds()" requires two arrays enclosed in prantesis. Each array may contain minimum of one and maximum of 100 positive or negative integers. E.g. ([1,2],[3])"
